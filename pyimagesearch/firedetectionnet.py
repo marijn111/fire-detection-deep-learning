@@ -1,11 +1,11 @@
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.kayers import BatchNormalization
-from tensorflow.keras.kayers import SeperableConv2D
-from tensorflow.keras.kayers import MaxPooling2D
-from tensorflow.keras.kayers import Activation
-from tensorflow.keras.kayers import Flatten
-from tensorflow.keras.kayers import Dropout
-from tensorflow.keras.kayers import Dense
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.layers import SeparableConv2D
+from tensorflow.keras.layers import MaxPooling2D
+from tensorflow.keras.layers import Activation
+from tensorflow.keras.layers import Flatten
+from tensorflow.keras.layers import Dropout
+from tensorflow.keras.layers import Dense
 
 class FireDetectionNet:
     @staticmethod
@@ -18,22 +18,22 @@ class FireDetectionNet:
         chanDim = -1
 
         # CONV -> RELU -> POOL
-        model.add(SeperableConv2D(16, (7, 7), padding='same', input_shape=inputShape))
+        model.add(SeparableConv2D(16, (7, 7), padding='same', input_shape=inputShape))
         model.add(Activation('relu'))
         model.add(BatchNormalization(axis=chanDim))
         model.add(MaxPooling2D(pool_size=(2,2)))
 
         # CONV -> RELU -> POOL
-        model.add(SeperableConv2D(32, (3,3), padding='same'))
+        model.add(SeparableConv2D(32, (3,3), padding='same'))
         model.add(Activation('relu'))
         model.add(BatchNormalization(axis=chanDim))
         model.add(MaxPooling2D(pool_size=(2,2)))
 
         #CONV -> RELU -> POOL
-        model.add(SeperableConv2D(64, (3,3), padding='same'))
+        model.add(SeparableConv2D(64, (3,3), padding='same'))
         model.add(Activation('relu'))
         model.add(BatchNormalization(axis=chanDim))
-        model.add(SeperableConv2D(64, (3,3), padding='same'))
+        model.add(SeparableConv2D(64, (3,3), padding='same'))
         model.add(Activation('relu'))
         model.add(BatchNormalization(axis=chanDim))
         model.add(MaxPooling2D(pool_size=(2,2)))

@@ -3,3 +3,8 @@ spatial_envelope_256x256_static_8outdoorcategories/
 .venv/
 .vscode/
 .DS_Store
+venv_test/
+pyimagesearch/__pycache__/
+__pycache__/
+environment.yml
+output/examples/

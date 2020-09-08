@@ -17,12 +17,12 @@ BATCH_SIZE = 64
 NUM_EPOCHS = 50
 
 # set path to serialized model after training
- MODEL_PATH = os.path.sep.join(['output', 'fire_detection.model'])
+MODEL_PATH = os.path.sep.join(['output', 'fire_detection.model'])
 
- # define path to LR finder plot and training history plot
- LRFIND_PLOT_PATH = os.path.sep.join(['output', 'lrfind_plot.png'])
- TRAINING_PLOT_PATH = os.path.sep.join(['output', 'training_plot.png'])
+# define path to LR finder plot and training history plot
+LRFIND_PLOT_PATH = os.path.sep.join(['output', 'lrfind_plot.png'])
+TRAINING_PLOT_PATH = os.path.sep.join(['output', 'training_plot.png'])
 
- # define output path to store labels and annotations and num of images to sample
- OUTPUT_IMAGE_PATH = os.path.sep.join(['output', 'examples'])
- SAMPLE_SIZE = 50
+# define output path to store labels and annotations and num of images to sample
+OUTPUT_IMAGE_PATH = os.path.sep.join(['output', 'examples'])
+SAMPLE_SIZE = 50
